@@ -1,0 +1,24 @@
+{
+  "name": "fis-receiver",
+  "version": "0.0.1",
+  "description": "FIS static receiver",
+  "main": "server.js",
+  "bin": {
+    "fisrcv": "bin/fisrcv"
+  },
+  "dependencies": {
+    "formidable": "1.0.15",
+    "mkdirp": "0.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fis",
+    "fis-deploy",
+    "fis-re"
+  ],
+  "author": "fis-team,bytedance",
+  "license": "BSD"
+}
