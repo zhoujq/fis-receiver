@@ -12,25 +12,23 @@ var server = http.createServer(function (req, res) {
     }
 
     function next(from, to) {
-        // fs.readFile(from, function (err, content) {
-        //     if (err) {
-        //         error(err);
-        //     } else {
-        //         fs.writeFile(to, content, function (err) {
-        //             if (err) {
-        //                 error(err);
-        //             }
-        //             res.writeHead(200, {'Content-Type': 'text/plain'});
-        //             res.end('0'); //success
-        //         });
-        //     }
-        // });
-        fs.rename(from, to, function(err) {
+        fs.readFile(from, function (err, content) {
             if (err) {
                 error(err);
+            } else {
+                fs.writeFile(to, content, function (err) {
+                    if (err) {
+                        error(err);
+                    }
+                    fs.unlink(from, function (err) {
+                        if (err) {
+                            error(err);
+                        }
+                    });
+                    res.writeHead(200, {'Content-Type': 'text/plain'});
+                    res.end('0'); //success
+                });
             }
-            res.writeHead(200, {'Content-Type': 'text/plain'});
-            res.end('0'); //success
         });
     }
 
