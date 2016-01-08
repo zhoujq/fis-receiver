@@ -1,14 +1,14 @@
 {
   "name": "fis-receiver",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "FIS static receiver",
   "main": "server.js",
   "bin": {
     "fisrcv": "bin/fisrcv"
   },
   "dependencies": {
-    "formidable": "1.0.15",
-    "mkdirp": "0.5.0"
+    "formidable": "^1.0.17",
+    "mkdirp": "^0.5.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -17,7 +17,7 @@
   "keywords": [
     "fis",
     "fis-deploy",
-    "fis-re"
+    "fisrcv"
   ],
   "author": "fis-team,bytedance",
   "license": "BSD"
